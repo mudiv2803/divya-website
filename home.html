@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Divya ✨</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-body">
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-overlay">
+    <h1 id="typingText"></h1>
+
+    <p>Stories • Dates • Moments</p>
+  </div>
+</section>
+<!-- JOURNEY SECTION -->
+<section class="journey-section" id="journey">
+  <h2 class="journey-title">Our Journey</h2>
+
+  <div class="journey-container">
+
+    <!-- TIMELINE -->
+    <div class="journey-timeline">
+      <button onclick="openJourney('meeting')">First Meeting</button>
+      <button onclick="openJourney('vrindavan')">Vrindavan</button>
+
+      <div class="nested-timeline">
+        <span>Kota</span>
+        <button onclick="openJourney('kota1')">Day 1</button>
+        <button onclick="openJourney('kota2')">Day 2</button>
+        <button onclick="openJourney('kota3')">Day 3</button>
+        <button onclick="openJourney('kota4')">Day 4</button>
+        <button onclick="openJourney('kota5')">Day 5</button>
+      </div>
+
+      <button onclick="openJourney('today')">Today</button>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="journey-content">
+      <img id="journeyImage" src="" alt="">
+      <p id="journeyText"></p>
+    </div>
+
+  </div>
+</section>
+
+<!-- IMPORTANT DATES -->
+<section class="dates-section" id="dates">
+  <h2 class="dates-title">Important Dates</h2>
+
+  <div class="dates-grid">
+    <div class="date-card">
+      <span class="date">3 July</span>
+      <p>A day that quietly changed everything.</p>
+    </div>
+
+    <div class="date-card">
+      <span class="date">First Meeting</span>
+      <p>It felt familiar, like it wasn’t the first time.</p>
+    </div>
+
+    <div class="date-card">
+      <span class="date">Vrindavan</span>
+      <p>Peace, faith, and silent understanding.</p>
+    </div>
+
+    <div class="date-card">
+      <span class="date">Kota Days</span>
+      <p>Distance existed, care stayed close.</p>
+    </div>
+
+    <div class="date-card">
+      <span class="date">Today</span>
+      <p>Still meaningful. Still real.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LETTERS SECTION -->
+<section class="letters-section" id="letters">
+  <h2 class="letters-title">Letters</h2>
+
+  <div class="letters-container">
+    <div class="letter">
+      <p>
+        Some things are never said out loud,  
+        not because they don’t matter,  
+        but because they matter too much.
+      </p>
+    </div>
+
+    <div class="letter">
+      <p>
+        You became important quietly,  
+        without asking,  
+        without trying.
+      </p>
+    </div>
+
+    <div class="letter">
+      <p>
+        No matter how life changes,  
+        some bonds don’t need daily words  
+        to stay real.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- SECTIONS -->
+<section class="section">
+
+  <!-- STORIES -->
+  <div class="section-item">
+    <button onclick="toggleDropdown('storiesDrop')">📖 Stories ▾</button>
+    <div id="storiesDrop" class="dropdown">
+      <p>How everything started</p>
+      <p>Moments that felt like destiny</p>
+      <p>Things never said but always felt</p>
+    </div>
+  </div>
+
+  <!-- IMPORTANT DATES -->
+  <div class="section-item">
+    <button onclick="toggleDropdown('datesDrop')">📅 Important Dates ▾</button>
+    <div id="datesDrop" class="dropdown">
+      <p>3 July – A special beginning</p>
+      <p>First meeting</p>
+      <p>Unforgettable days</p>
+    </div>
+  </div>
+
+  <!-- MOMENTS -->
+  <div class="section-item">
+    <button onclick="toggleDropdown('momentsDrop')">🌸 Moments ▾</button>
+    <div id="momentsDrop" class="dropdown">
+      <p>Vrindavan</p>
+      <p>Delhi</p>
+      <p>Kota – Days that mattered</p>
+    </div>
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

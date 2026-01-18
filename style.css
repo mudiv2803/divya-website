@@ -1,0 +1,339 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* AUTH PAGE */
+.auth-body {
+  height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.auth-card button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #ff4f7a;
+  color: white;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+/* HOME PAGE */
+.home-body {
+  margin: 0;
+  background: #0f0f0f;
+  color: white;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1.2s ease-in-out;
+}
+
+.hero-overlay {
+  height: 100%;
+  background: linear-gradient(to top, #0f0f0f, transparent);
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* SECTIONS */
+.section {
+  padding: 50px;
+}
+
+.section-item {
+  margin-bottom: 30px;
+}
+
+.section-item button {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  background: #ff4f7a;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* DROPDOWN */
+.dropdown {
+  display: none;
+  margin-top: 15px;
+  padding: 20px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(15px);
+
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.dropdown.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown p {
+  padding: 8px 0;
+}
+
+/* ALL PRIMARY BUTTONS */
+button {
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+/* hover */
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+/* click */
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section-item,
+.dropdown p {
+  animation: softFade 0.6s ease both;
+}
+
+@keyframes softFade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section {
+  padding: 60px 20px;
+}
+
+.section-item {
+  margin-bottom: 35px;
+}
+
+.section-item button {
+  letter-spacing: 0.4px;
+}
+
+@media (max-width: 768px) {
+  .hero-overlay {
+    padding: 30px;
+  }
+
+  .section {
+    padding: 40px 16px;
+  }
+
+  button {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* JOURNEY SECTION */
+.journey-section {
+  padding: 80px 20px;
+  background: #0f0f0f;
+  color: white;
+}
+
+.journey-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.journey-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* TIMELINE */
+.journey-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.journey-timeline button {
+  background: rgba(255,255,255,0.12);
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.journey-timeline button:hover {
+  background: rgba(255,255,255,0.22);
+}
+
+.nested-timeline {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nested-timeline span {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* CONTENT */
+.journey-content {
+  flex: 1;
+  min-height: 260px;
+  animation: softFade 0.6s ease both;
+}
+
+.journey-content img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 15px;
+}
+
+.journey-content p {
+  line-height: 1.6;
+}
+/* IMPORTANT DATES */
+.dates-section {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #0f0f0f, #141414);
+  color: white;
+}
+
+.dates-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.dates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* DATE CARD */
+.date-card {
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 25px;
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.date-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255,255,255,0.15);
+}
+
+.date {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ff9a9e;
+}
+
+.date-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.date-card {
+  animation: softFade 0.6s ease both;
+}
+
+/* LETTERS */
+.letters-section {
+  padding: 90px 20px;
+  background: #0b0b0b;
+  color: white;
+}
+
+.letters-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.letters-container {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* LETTER CARD */
+.letter {
+  background: rgba(255,255,255,0.06);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  animation: softFade 0.8s ease both;
+}
+
+.letter p {
+  line-height: 1.8;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
